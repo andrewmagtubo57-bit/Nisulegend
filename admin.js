@@ -134,7 +134,7 @@ setInterval(renderStatus, 1000);
 
 let started = false;
 onUser(async user => {
-  if (!user) { location.replace("loginform.html"); return; }
+  if (!user) { location.replace("index.html"); return; }
   const ok = await checkAdmin(user.uid).catch(() => false);
   if (!ok) { $("#deniedUid").textContent = user.uid; $("#denied").hidden = false; return; }
   $("#app").hidden = false;
